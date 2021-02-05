@@ -192,11 +192,12 @@
 
   function locationCallback(event){
     if (event.errors.length > 0 && event.errors.includes("Error: tag already exists.")) {
-        notyNotification('relax', 3000, 'error', 'topCenter', 'Location Already Saved.');
-      } else if (event.saved.length > 0) {
-        notyNotification('relax', 3000, 'success', 'topCenter', 'Location Saved');
-      } else {
-        notyNotification('relax', 3000, 'error', 'topCenter', 'Something went wrong. Contact administrator.');
+        notyNotification('relax', 3000, 'error', 'topRight', 'Location Already Saved.');
+        } else if (event.saved.length > 0) {
+        notyNotification('relax', 3000, 'success', 'topRight', 'Location Saved');
+        } else {
+        notyNotification('relax', 3000, 'error', 'topRight', 'Something went wrong. Contact administrator.');
+        }
     }
   }
 
